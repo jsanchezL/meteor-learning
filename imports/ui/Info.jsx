@@ -1,11 +1,11 @@
-import React from 'react';
-import { useTracker } from 'meteor/react-meteor-data';
-import { LinksCollection } from '../api/links';
+import React from 'react'
+import { useTracker } from 'meteor/react-meteor-data'
+import { LinksCollection } from '../api/links'
 
 export const Info = () => {
   const links = useTracker(() => {
-    return LinksCollection.find().fetch();
-  });
+    return LinksCollection.find().fetch()
+  })
 
   return (
     <div>
@@ -16,5 +16,5 @@ export const Info = () => {
         </li>
       )}</ul>
     </div>
-  );
-};
+  )
+}
